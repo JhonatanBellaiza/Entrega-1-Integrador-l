@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +30,28 @@ namespace Registro_Ingreso_Universidad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form validar = new Form4();
-            validar.Show();
+                
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void val_Click(object sender, EventArgs e)
+        {
+            String nombre = nombreVisitante.Text;
+            String id = identificacionVisitante.Text;
+            String url = 
+
+            if (File.Exists())
+            {
+
+            }
+
+
 
         }
     }
