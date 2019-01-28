@@ -44,11 +44,15 @@ namespace Registro_Ingreso_Universidad
         {
             String nombre = nombreVisitante.Text;
             String id = identificacionVisitante.Text;
-            String url = 
+            String url = "\\Archivos\\" + nombre; 
 
-            if (File.Exists())
+            if (File.Exists(url))
             {
 
+            }
+            else
+            {
+                File.WriteAllText(url,id);
             }
 
 
