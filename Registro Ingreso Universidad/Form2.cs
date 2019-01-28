@@ -44,16 +44,29 @@ namespace Registro_Ingreso_Universidad
         {
             String nombre = nombreVisitante.Text;
             String id = identificacionVisitante.Text;
-            String url = "\\Archivos\\" + nombre; 
+            String url = "C:\\Users\\Juan David\\source\\repos\\Entrega-1-Integrador-l\\Archivos\\" + nombre + ".txt";
+            bool allowed = (!(nombreVisitante.Text.Equals(String.Empty))) && (!(identificacionVisitante.Text.Equals(String.Empty))) && (!(edadVisitante.Text.Equals(String.Empty))) && (!(motivoVisitante.Text.Equals(String.Empty)));
 
-            if (File.Exists(url))
+            if (allowed)
             {
+                if (File.Exists(url))
+                {
+                    MessageBox.Show("Ya estas registrado");
+                }
+                else
+                {
+                    File.WriteAllText(url, id);
+                    MessageBox.Show("Registro exitoso");
+                    nombreVisitante.Text = "";
+                    identificacionVisitante.Text = "";
 
+                }
             }
             else
             {
-                File.WriteAllText(url,id);
+                MessageBox.Show("Faltan Datos");
             }
+
 
 
 

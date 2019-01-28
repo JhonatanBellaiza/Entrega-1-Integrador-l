@@ -29,42 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.validar = new System.Windows.Forms.Button();
+            this.codigoComunidad = new System.Windows.Forms.TextBox();
+            this.nombreComunidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cargoComunidad = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // validar
             // 
-            this.button1.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(146, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Validar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.validar.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validar.Location = new System.Drawing.Point(146, 247);
+            this.validar.Name = "validar";
+            this.validar.Size = new System.Drawing.Size(75, 23);
+            this.validar.TabIndex = 21;
+            this.validar.Text = "Validar";
+            this.validar.UseVisualStyleBackColor = true;
+            this.validar.Click += new System.EventHandler(this.validar_Click);
             // 
-            // textBox4
+            // codigoComunidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(219, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 20;
+            this.codigoComunidad.Location = new System.Drawing.Point(219, 146);
+            this.codigoComunidad.Name = "codigoComunidad";
+            this.codigoComunidad.Size = new System.Drawing.Size(100, 20);
+            this.codigoComunidad.TabIndex = 20;
             // 
-            // textBox1
+            // nombreComunidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.nombreComunidad.Location = new System.Drawing.Point(219, 102);
+            this.nombreComunidad.Name = "nombreComunidad";
+            this.nombreComunidad.Size = new System.Drawing.Size(100, 20);
+            this.nombreComunidad.TabIndex = 17;
             // 
             // label4
             // 
@@ -128,30 +129,30 @@
             this.label6.Text = "Comunidad Universitaria";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // listBox1
+            // cargoComunidad
             // 
-            this.listBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Items.AddRange(new object[] {
+            this.cargoComunidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cargoComunidad.FormattingEnabled = true;
+            this.cargoComunidad.ItemHeight = 19;
+            this.cargoComunidad.Items.AddRange(new object[] {
             "Estudiante",
             "Empleado",
             "Directivo"});
-            this.listBox1.Location = new System.Drawing.Point(219, 190);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(100, 23);
-            this.listBox1.TabIndex = 23;
+            this.cargoComunidad.Location = new System.Drawing.Point(219, 190);
+            this.cargoComunidad.Name = "cargoComunidad";
+            this.cargoComunidad.Size = new System.Drawing.Size(100, 23);
+            this.cargoComunidad.TabIndex = 23;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 308);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.cargoComunidad);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.validar);
+            this.Controls.Add(this.codigoComunidad);
+            this.Controls.Add(this.nombreComunidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -167,15 +168,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button validar;
+        private System.Windows.Forms.TextBox codigoComunidad;
+        private System.Windows.Forms.TextBox nombreComunidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox cargoComunidad;
     }
 }
