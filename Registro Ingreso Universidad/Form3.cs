@@ -40,6 +40,7 @@ namespace Registro_Ingreso_Universidad
 
         private void validar_Click(object sender, EventArgs e)
         {
+            /*
             String nombre = nombreComunidad.Text;
             String id = codigoComunidad.Text;
             String url = "C:\\Users\\Juan David\\source\\repos\\Entrega-1-Integrador-l\\Archivos\\" + nombre + ".txt";
@@ -65,7 +66,58 @@ namespace Registro_Ingreso_Universidad
             {
                 MessageBox.Show("Faltan datos por completar");
             }
+            */
 
+            try
+            {
+                StreamWriter sw = new StreamWriter("..\\..\\Archivos.txt", true);
+                bool allow = (!(nombreComunidad.Text).Equals(String.Empty)) && (!(codigoComunidad.Text).Equals(String.Empty)) && (!(cargoComunidad.Text.Equals(String.Empty)));
+
+                if (allow)
+                {
+                    String nombre = nombreComunidad.Text;
+                    String id = codigoComunidad.Text;
+                    sw.WriteLine("Nombre: " + nombre);
+                    sw.WriteLine("Codigo: " + id);
+                    sw.WriteLine();
+                    sw.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Faltan datos por llenar");
+                }
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("Exception: " + m.Message);
+            }
+
+
+        }
+
+        private void reporteComunidad_Click(object sender, EventArgs e)
+        {
+
+            String line;
+            try
+            {
+                StreamReader sr = new StreamReader("..\\..\\Archivos.txt");
+                line = "";
+                String acomul = "";
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    acomul += line;
+                }
+
+                sr.Close();
+
+                MessageBox.Show(acomul);
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("Exception: " + m.Message);
+            }
 
         }
     }

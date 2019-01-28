@@ -1,0 +1,12 @@
+Nombre: Juan
+Codigo: 123123123
+
+Nombre: Leonel
+Codigo: 1212
+
+Nombre: Leonel
+Codigo: 1212
+
+Nombre: Marcelino
+Codigo: 123123
+

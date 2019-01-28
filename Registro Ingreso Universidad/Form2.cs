@@ -42,9 +42,12 @@ namespace Registro_Ingreso_Universidad
 
         private void val_Click(object sender, EventArgs e)
         {
+            /*
             String nombre = nombreVisitante.Text;
             String id = identificacionVisitante.Text;
-            String url = "C:\\Users\\Juan David\\source\\repos\\Entrega-1-Integrador-l\\Archivos\\" + nombre + ".txt";
+            //String url = "C:\\Users\\Juan David\\source\\repos\\Entrega-1-Integrador-l\\Archivos\\" + nombre + ".txt";
+            String url = "\\Archivos\\" + nombre + ".txt";
+
             bool allowed = (!(nombreVisitante.Text.Equals(String.Empty))) && (!(identificacionVisitante.Text.Equals(String.Empty))) && (!(edadVisitante.Text.Equals(String.Empty))) && (!(motivoVisitante.Text.Equals(String.Empty)));
 
             if (allowed)
@@ -65,6 +68,57 @@ namespace Registro_Ingreso_Universidad
             else
             {
                 MessageBox.Show("Faltan Datos");
+            }
+            */
+
+            try
+            {
+                StreamWriter sw = new StreamWriter("..\\..\\Archivos.txt", true);
+
+                bool allowed = (!(nombreVisitante.Text.Equals(String.Empty))) && (!(identificacionVisitante.Text.Equals(String.Empty))) && (!(edadVisitante.Text.Equals(String.Empty))) && (!(motivoVisitante.Text.Equals(String.Empty)));
+                if (allowed)
+                {
+                    String nombre = nombreVisitante.Text;
+                    String id = identificacionVisitante.Text;
+                    sw.WriteLine("Nombre: " + nombre);
+                    sw.WriteLine("Codigo: " + id);
+                    sw.WriteLine();
+                    sw.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Faltan datos por llenar");
+                }   
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("Exception: " + m.Message);
+            }
+
+        }
+
+        private void reporteVisitantes_Click(object sender, EventArgs e)
+        {
+
+            String line;
+            try
+            {
+                StreamReader sr = new StreamReader("..\\..\\Archivos.txt");
+                line = "";
+                String acomul = "";
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    acomul += line;
+                }
+              
+                sr.Close();
+
+                MessageBox.Show(acomul);
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine("Exception: " + m.Message);
             }
 
 

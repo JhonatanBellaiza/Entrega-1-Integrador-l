@@ -40,6 +40,7 @@
             this.identificacionVisitante = new System.Windows.Forms.TextBox();
             this.motivoVisitante = new System.Windows.Forms.ListBox();
             this.val = new System.Windows.Forms.Button();
+            this.reporteVisitantes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,18 +143,29 @@
             // 
             // val
             // 
-            this.val.Location = new System.Drawing.Point(157, 242);
+            this.val.Location = new System.Drawing.Point(107, 240);
             this.val.Name = "val";
             this.val.Size = new System.Drawing.Size(75, 23);
             this.val.TabIndex = 0;
             this.val.Text = "Validar";
             this.val.Click += new System.EventHandler(this.val_Click);
             // 
+            // reporteVisitantes
+            // 
+            this.reporteVisitantes.Location = new System.Drawing.Point(244, 240);
+            this.reporteVisitantes.Name = "reporteVisitantes";
+            this.reporteVisitantes.Size = new System.Drawing.Size(75, 23);
+            this.reporteVisitantes.TabIndex = 12;
+            this.reporteVisitantes.Text = "Reporte";
+            this.reporteVisitantes.UseVisualStyleBackColor = true;
+            this.reporteVisitantes.Click += new System.EventHandler(this.reporteVisitantes_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 315);
+            this.Controls.Add(this.reporteVisitantes);
             this.Controls.Add(this.val);
             this.Controls.Add(this.motivoVisitante);
             this.Controls.Add(this.identificacionVisitante);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.TextBox identificacionVisitante;
         private System.Windows.Forms.ListBox motivoVisitante;
         private System.Windows.Forms.Button val;
+        private System.Windows.Forms.Button reporteVisitantes;
     }
 }

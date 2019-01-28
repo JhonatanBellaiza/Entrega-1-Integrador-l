@@ -39,13 +39,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cargoComunidad = new System.Windows.Forms.ListBox();
+            this.reporteComunidad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // validar
             // 
             this.validar.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validar.Location = new System.Drawing.Point(146, 247);
+            this.validar.Location = new System.Drawing.Point(128, 246);
             this.validar.Name = "validar";
             this.validar.Size = new System.Drawing.Size(75, 23);
             this.validar.TabIndex = 21;
@@ -143,11 +144,22 @@
             this.cargoComunidad.Size = new System.Drawing.Size(100, 23);
             this.cargoComunidad.TabIndex = 23;
             // 
+            // reporteComunidad
+            // 
+            this.reporteComunidad.Location = new System.Drawing.Point(231, 246);
+            this.reporteComunidad.Name = "reporteComunidad";
+            this.reporteComunidad.Size = new System.Drawing.Size(75, 23);
+            this.reporteComunidad.TabIndex = 24;
+            this.reporteComunidad.Text = "Reporte";
+            this.reporteComunidad.UseVisualStyleBackColor = true;
+            this.reporteComunidad.Click += new System.EventHandler(this.reporteComunidad_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 308);
+            this.Controls.Add(this.reporteComunidad);
             this.Controls.Add(this.cargoComunidad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.validar);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox cargoComunidad;
+        private System.Windows.Forms.Button reporteComunidad;
     }
 }
